@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <agm-map (mapClick)="onSetMarker($event)" [latitude]="lat" [longitude]="lng" [zoom]="16">
+    <agm-marker [latitude]="lat" [longitude]="lng">
+    </agm-marker>
+  </agm-map>
+  <button ion-button color="light" (click)="onLocate()" round>Locate
+  </button>
+</ion-content>
